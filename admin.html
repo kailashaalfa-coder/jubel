@@ -22,7 +22,7 @@
     .actions button{padding:6px 10px;font-size:12px}.imgs{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
     .imgs div{position:relative}.imgs button{position:absolute;top:-6px;right:-6px;padding:0;width:20px;height:20px;border-radius:50%;background:#c0392b}
     #msg{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:#111;color:#fff;padding:10px 16px;border-radius:8px;display:none;max-width:90%}
-    .chk{display:flex;gap:16px;margin-top:12px}.chk label{display:flex;gap:6px;align-items:center;margin:0;font-weight:600}.chk input{width:auto}
+    .hint{font-size:12px;color:#666;margin:6px 0 0}.chk{display:flex;gap:16px;margin-top:12px}.chk label{display:flex;gap:6px;align-items:center;margin:0;font-weight:600}.chk input{width:auto}
   </style>
 </head>
 <body>
@@ -51,12 +51,24 @@
       <label for="f_desc">Deskripsi lengkap</label><textarea id="f_desc"></textarea>
       <div class="row">
         <div><label for="f_condition">Kondisi</label><input id="f_condition" placeholder="Baru / Bekas"></div>
-        <div><label for="f_location">Lokasi</label><input id="f_location" placeholder="Kota, Provinsi"></div>
+        <div><label for="f_availability">Ketersediaan</label><input id="f_availability" value="Tersedia"></div>
+      </div>
+      <label for="f_wa">WhatsApp penjual (08xx / 62xx)</label><input id="f_wa" inputmode="tel">
+
+      <h3 style="margin:22px 0 0;font-size:15px">Lokasi</h3>
+      <div class="row">
+        <div><label for="f_prov">Provinsi *</label><select id="f_prov"><option value="">Memuat...</option></select></div>
+        <div><label for="f_reg">Kota / Kabupaten *</label><select id="f_reg" disabled><option value="">Pilih provinsi dulu</option></select></div>
       </div>
       <div class="row">
-        <div><label for="f_availability">Ketersediaan</label><input id="f_availability" value="Tersedia"></div>
-        <div><label for="f_wa">WhatsApp penjual (08xx / 62xx)</label><input id="f_wa" inputmode="tel"></div>
+        <div><label for="f_dist">Kecamatan *</label><select id="f_dist" disabled><option value="">Pilih kota/kabupaten dulu</option></select></div>
+        <div><label for="f_vil">Kelurahan / Desa *</label><select id="f_vil" disabled><option value="">Pilih kecamatan dulu</option></select></div>
       </div>
+      <label for="f_addr">Alamat detail (jalan, nomor, RT/RW, patokan)</label>
+      <input id="f_addr" maxlength="200" placeholder="Jl. Melati No. 5, RT 02/RW 03">
+      <div class="chk"><label><input type="checkbox" id="f_addr_wa"> Alamat detail via WhatsApp (tidak ditampilkan di situs)</label></div>
+      <p class="hint">Kalau dicentang, alamat detail <b>tidak disimpan</b> dan situs menampilkan catatan "Alamat detail via WhatsApp" setelah nama wilayah.</p>
+
       <label for="f_badge">Badge (opsional)</label><input id="f_badge" placeholder="JUBEL FIND" maxlength="30">
       <label for="f_files">Foto (maks. 4, JPG/PNG/WEBP, maks. 3 MB per foto)</label>
       <input id="f_files" type="file" accept="image/jpeg,image/png,image/webp" multiple>
