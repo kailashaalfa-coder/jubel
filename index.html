@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HOME | JUBEL</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="navbar">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">JUBEL</a>
+    <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+    <nav id="menu" aria-label="Menu utama">
+      <ul class="menu">
+        <li><a href="index.html" aria-current="page">HOME</a></li>
+        <li class="has-sub">
+          <a href="service.html">SERVICE</a><button class="sub-toggle" aria-label="Buka submenu SERVICE">&#9662;</button>
+          <ul class="sub">
+            <li><a href="web-development.html">WEB DEVELOPMENT</a></li>
+            <li class="has-sub">
+              <a href="jual-beli.html">JUAL BELI</a><button class="sub-toggle" aria-label="Buka submenu JUAL BELI">&#9662;</button>
+              <ul class="sub sub-level2">
+            <li><a href="kategori.html?cat=properti">Properti</a></li>
+            <li><a href="kategori.html?cat=gadget">GADGET</a></li>
+            <li><a href="kategori.html?cat=otomotif">OTOMOTIF</a></li>
+            <li><a href="kategori.html?cat=fashion">FASHION</a></li>
+</ul>
+            </li>
+            <li><a href="design.html">DESIGN</a></li>
+            <li><a href="editing.html">EDITING</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+  
+<main class="container home-page">
+
+  <!-- HERO -->
+  <section class="hero reveal">
+    <div class="hero-content">
+      <span class="hero-badge">SELAMAT DATANG DI JUBEL</span>
+
+      <h1>
+        JUal BELi.<br>
+        <span>Temukan yang kamu cari.</span>
+      </h1>
+
+      <p>
+        Dari barang menarik sampai peluang terbaik.
+        JUBEL menghadirkan berbagai pilihan produk
+        dari beragam kategori dalam satu etalase.
+        Tinggal temukan, lihat detailnya, dan hubungi penjual.
+      </p>
+
+      <div class="hero-actions">
+        <a href="jual-beli.html" class="btn-primary">
+          JELAJAHI ETALASE
+        </a>
+
+        <a href="about.html" class="btn-secondary">
+          KENAL JUBEL
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-highlight">
+      <h2>Good stuff.<br>Great finds.</h2>
+      <p>
+        Siapa tahu, barang yang kamu cari
+        ternyata ada di sini.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- CATEGORY -->
+  <section class="home-section reveal">
+    <div class="section-heading">
+      <span class="section-label">EXPLORE</span>
+      <h2>Cari berdasarkan kategori.</h2>
+      <p>
+        Jelajahi berbagai pilihan produk yang
+        sudah dikumpulkan dalam etalase JUBEL.
+      </p>
+    </div>
+
+    <div class="category-grid">
+
+      <a href="kategori.html?cat=properti" class="category-card">
+        <span class="category-number">01</span>
+        <h3>PROPERTI</h3>
+        <p>Rumah, tanah, tempat usaha & lainnya.</p>
+        <span class="category-link">JELAJAHI &rarr;</span>
+      </a>
+
+      <a href="kategori.html?cat=gadget" class="category-card">
+        <span class="category-number">02</span>
+        <h3>GADGET</h3>
+        <p>Teknologi, elektronik & perangkat digital.</p>
+        <span class="category-link">JELAJAHI &rarr;</span>
+      </a>
+
+      <a href="kategori.html?cat=otomotif" class="category-card">
+        <span class="category-number">03</span>
+        <h3>OTOMOTIF</h3>
+        <p>Mobil, motor & berbagai kebutuhan otomotif.</p>
+        <span class="category-link">JELAJAHI &rarr;</span>
+      </a>
+
+      <a href="kategori.html?cat=fashion" class="category-card">
+        <span class="category-number">04</span>
+        <h3>FASHION</h3>
+        <p>Gaya, outfit & berbagai pilihan fashion.</p>
+        <span class="category-link">JELAJAHI &rarr;</span>
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- FEATURED PRODUCTS -->
+  <section class="home-section featured-section reveal">
+    <div class="section-heading">
+      <span class="section-label">JUBEL PICKS</span>
+      <h2>Temuan menarik minggu ini.</h2>
+      <p>
+        Beberapa produk pilihan yang layak
+        kamu lihat lebih dekat.
+      </p>
+    </div>
+
+    <!--
+      ADMIN / PENGELOLA:
+      Produk unggulan nantinya diambil dari database
+      atau diatur melalui sistem pengelolaan etalase.
+    -->
+
+    <div class="featured-grid">
+      <!-- Produk unggulan dirender otomatis dari data produk bersama -->
+    </div>
+
+    <div class="section-footer">
+      <a href="jual-beli.html" class="btn-secondary">
+        LIHAT SEMUA ETALASE
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ABOUT JUBEL -->
+  <section class="jubel-about reveal">
+    <div class="about-content">
+      <span class="section-label">WHAT IS JUBEL?</span>
+
+      <h2>
+        Bukan sekadar<br>
+        tempat melihat barang.
+      </h2>
+
+      <p>
+        JUBEL adalah etalase digital yang mengumpulkan
+        berbagai produk menarik dari pemilik dan penjual.
+        Kami membantu memperkenalkan produk kepada lebih
+        banyak orang melalui kurasi, informasi produk,
+        dan media promosi digital.
+      </p>
+
+      <p>
+        Kamu tinggal menjelajahi etalase, memilih produk
+        yang menarik perhatian, melihat detailnya, lalu
+        terhubung dengan penjual.
+      </p>
+
+      <a href="about.html" class="text-link">
+        LEBIH TENTANG JUBEL &rarr;
+      </a>
+    </div>
+  </section>
+
+
+  <!-- WHY JUBEL -->
+  <section class="home-section why-jubel reveal">
+    <div class="section-heading">
+      <span class="section-label">WHY JUBEL</span>
+      <h2>Belanja barang, mulai dari menemukan.</h2>
+    </div>
+
+    <div class="benefit-grid">
+
+      <div class="benefit-card">
+        <h3>01. Banyak pilihan</h3>
+        <p>
+          Temukan produk dari berbagai kategori
+          tanpa harus berpindah-pindah tempat.
+        </p>
+      </div>
+
+      <div class="benefit-card">
+        <h3>02. Informasi jelas</h3>
+        <p>
+          Lihat foto, informasi, harga, dan detail
+          produk sebelum menghubungi penjual.
+        </p>
+      </div>
+
+      <div class="benefit-card">
+        <h3>03. Terhubung langsung</h3>
+        <p>
+          Tertarik dengan suatu produk?
+          Hubungi penjual melalui kontak yang tersedia.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SELLER PROMOTION -->
+  <section class="seller-cta reveal">
+    <div class="seller-cta-content">
+      <span class="section-label">PUNYA PRODUK UNTUK DIJUAL?</span>
+
+      <h2>Produk kamu.<br>Jangkauan lebih luas.</h2>
+
+      <p>
+        Punya rumah, kendaraan, gadget, fashion,
+        atau produk lainnya yang ingin dipasarkan?
+        Jadikan JUBEL sebagai salah satu etalase
+        untuk memperkenalkan produkmu kepada calon pembeli.
+      </p>
+
+      <a href="contact.html" class="btn-primary">
+        PROMOSIKAN PRODUK DI JUBEL &rarr;
+      </a>
+    </div>
+  </section>
+
+
+  <!-- CLOSING CTA -->
+  <section class="home-closing reveal">
+    <span class="section-label">YOUR NEXT FIND STARTS HERE</span>
+
+    <h2>
+      Scroll, temukan,<br>
+      siapa tahu cocok.
+    </h2>
+
+    <p>
+      Produk menarik selalu punya cerita.
+      Temukan cerita berikutnya di JUBEL.
+    </p>
+
+    <a href="jual-beli.html" class="btn-primary">
+      MULAI JELAJAHI JUBEL &rarr;
+    </a>
+  </section>
+
+</main>
+
+  
+<footer class="site-footer">
+
+  <div class="footer-main">
+
+    <!-- BRAND -->
+    <div class="footer-brand">
+      <a href="index.html" class="footer-logo">JUBEL<span>.</span></a>
+
+      <h2>JUal BELi.</h2>
+
+      <p>
+        Etalase berbagai produk. Satu tempat untuk menemukan
+        barang yang kamu cari, dan peluang yang mungkin kamu temukan.
+      </p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="footer-column">
+      <h3>NAVIGASI</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jual-beli.html">Jual Beli</a></li>
+        
+        <li><a href="service.html">Service</a></li>
+        <li><a href="web-development.html">Web Development</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="editing.html">Editing</a></li>
+        <li><a href="about.html">About JUBEL</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- CATEGORIES -->
+    <div class="footer-column">
+      <h3>ETALASE</h3>
+      <ul>
+        <li><a href="kategori.html?cat=properti">Properti</a></li>
+        <li><a href="kategori.html?cat=gadget">Gadget</a></li>
+        <li><a href="kategori.html?cat=otomotif">Otomotif</a></li>
+        <li><a href="kategori.html?cat=fashion">Fashion</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT / SELLER -->
+    <div class="footer-column footer-contact">
+      <h3>PUNYA PRODUK?</h3>
+
+      <p>
+        Ingin produk kamu tampil di etalase JUBEL
+        dan menjangkau calon pembeli lebih luas?
+      </p>
+
+      <a href="contact.html" class="footer-cta">
+        HUBUNGI JUBEL &rarr;
+      </a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div class="footer-bottom">
+    <p>&copy; 2026 JUBEL — JUal BELi.</p>
+
+    <p class="footer-bottom-tagline">
+      Scroll. Temukan. Siapa tahu cocok.
+    </p>
+  </div>
+
+</footer>
+
+
+  <script src="js/script.js"></script>
+  <script src="js/supabase-config.js"></script>
+<script src="js/jubel-products.js"></script>
+  <script src="js/jubel-home.js"></script>
+</body>
+</html>

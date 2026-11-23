@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin | JUBEL</title>
+  <style>
+    *{box-sizing:border-box}body{font-family:system-ui,sans-serif;margin:0;background:#f4f4f2;color:#111}
+    .wrap{max-width:960px;margin:0 auto;padding:24px 16px 80px}
+    h1{font-size:22px;margin:0}header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px}
+    .card{background:#fff;border-radius:14px;padding:18px;margin-bottom:16px}
+    label{display:block;font-size:12px;font-weight:700;margin:12px 0 4px}
+    input,select,textarea{width:100%;padding:10px;border:1px solid #ccc;border-radius:8px;font:inherit}
+    textarea{min-height:90px}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media(max-width:600px){.row{grid-template-columns:1fr}}
+    button{padding:10px 16px;border:0;border-radius:8px;background:#111;color:#fff;font-weight:700;cursor:pointer}
+    button.ghost{background:#eee;color:#111}button.danger{background:#c0392b}
+    .item{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid #eee}
+    .item img,.thumb{width:64px;height:64px;object-fit:cover;border-radius:8px;background:#ddd;flex:none}
+    .grow{flex:1;min-width:0}.grow small{color:#777}.actions{display:flex;gap:6px;flex-wrap:wrap}
+    .actions button{padding:6px 10px;font-size:12px}.imgs{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+    .imgs div{position:relative}.imgs button{position:absolute;top:-6px;right:-6px;padding:0;width:20px;height:20px;border-radius:50%;background:#c0392b}
+    #msg{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:#111;color:#fff;padding:10px 16px;border-radius:8px;display:none;max-width:90%}
+    .chk{display:flex;gap:16px;margin-top:12px}.chk label{display:flex;gap:6px;align-items:center;margin:0;font-weight:600}.chk input{width:auto}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header><h1>JUBEL Admin</h1><div><a href="index.html">Lihat situs</a> <button id="logout" class="ghost" hidden>Keluar</button></div></header>
+
+  <section id="loginBox" class="card" hidden>
+    <h2>Masuk</h2>
+    <label for="email">Email</label><input id="email" type="email" autocomplete="username">
+    <label for="password">Password</label><input id="password" type="password" autocomplete="current-password">
+    <p><button id="loginBtn">MASUK</button></p>
+  </section>
+
+  <div id="app" hidden>
+    <section class="card">
+      <h2 id="formTitle">Tambah produk</h2>
+      <input type="hidden" id="f_id">
+      <label for="f_title">Nama produk *</label><input id="f_title" maxlength="140">
+      <div class="row">
+        <div><label for="f_category">Kategori</label>
+          <select id="f_category"><option value="properti">Properti</option><option value="gadget">Gadget</option><option value="otomotif">Otomotif</option><option value="fashion">Fashion</option><option value="lainnya">Lainnya</option></select></div>
+        <div><label for="f_price">Harga (angka, Rp)</label><input id="f_price" type="number" min="0" inputmode="numeric"></div>
+      </div>
+      <label for="f_price_label">Label harga (opsional, mis. "Hubungi penjual" - menggantikan angka)</label><input id="f_price_label">
+      <label for="f_short">Deskripsi singkat</label><input id="f_short" maxlength="200">
+      <label for="f_desc">Deskripsi lengkap</label><textarea id="f_desc"></textarea>
+      <div class="row">
+        <div><label for="f_condition">Kondisi</label><input id="f_condition" placeholder="Baru / Bekas"></div>
+        <div><label for="f_location">Lokasi</label><input id="f_location" placeholder="Kota, Provinsi"></div>
+      </div>
+      <div class="row">
+        <div><label for="f_availability">Ketersediaan</label><input id="f_availability" value="Tersedia"></div>
+        <div><label for="f_wa">WhatsApp penjual (08xx / 62xx)</label><input id="f_wa" inputmode="tel"></div>
+      </div>
+      <label for="f_badge">Badge (opsional)</label><input id="f_badge" placeholder="JUBEL FIND" maxlength="30">
+      <label for="f_files">Foto (maks. 4, JPG/PNG/WEBP, maks. 3 MB per foto)</label>
+      <input id="f_files" type="file" accept="image/jpeg,image/png,image/webp" multiple>
+      <div id="f_imgs" class="imgs"></div>
+      <div class="chk">
+        <label><input type="checkbox" id="f_featured"> Unggulan (tampil di Home)</label>
+        <label><input type="checkbox" id="f_published" checked> Tayang</label>
+      </div>
+      <p><button id="saveBtn">SIMPAN</button> <button id="resetBtn" class="ghost">BATAL / BARU</button></p>
+    </section>
+
+    <section class="card"><h2>Daftar produk</h2><div id="list">Memuat...</div></section>
+  </div>
+</div>
+<div id="msg" role="status"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="js/supabase-config.js"></script>
+<script src="js/jubel-admin.js"></script>
+</body>
+</html>
