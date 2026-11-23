@@ -33,7 +33,7 @@ for each row execute function public.touch_updated_at();
 
 -- Daftar admin
 create table if not exists public.admins (email text primary key);
-insert into public.admins (email) values ('EMAIL_ADMIN_KAMU@gmail.com') on conflict do nothing;
+insert into public.admins (email) values ('aphettttt@gmail.com') on conflict do nothing;
 
 create or replace function public.is_admin() returns boolean
 language sql stable security definer set search_path = public as $$
